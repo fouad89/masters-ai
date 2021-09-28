@@ -14,7 +14,7 @@ with open('Term 1/Metaheuristics/01-Lab1/TSP dataset/dummy_data.tsp', 'r') as f:
     for line in f:
         
         values = line.split()
-        city_dict[int(values[0])] = values[1:]
+        city_dict[int(values[0])] = [float(i) for i in values[1:]]
 
 
 def euc_distance(x1, y1, x2, y2):
@@ -34,6 +34,8 @@ for _ in range(len(city_dict)-1):
         distances[city] = dist
 
     min_dist_id = min(distances, key=distances.get)
+    min_dist = min(distances.values())
+    total_distance.append(min_dist)
     visited.append(min_dist_id)
     
     if min_dist_id in not_visited:
@@ -44,6 +46,7 @@ for _ in range(len(city_dict)-1):
 
 print(f"Final Visited: {visited}")
 print(f"Final Not Visited: {not_visited}")
+print(f"Total Distance: {sum(total_distance)}")
 
 
 
