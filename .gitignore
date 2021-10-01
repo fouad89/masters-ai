@@ -1,6 +1,10 @@
 *.pdf
 *.gdoc
-Lab01
-Lab02
-Lab03
-Lab1
+
+resources_BigData
+Term 1/Knowledge Repr/resources_knowledgeRepresentation
+Term 1/Metaheuristics/resources_MetaheuristicOptimisation
+Term 1/NLP/resources_NaturalLanguageProcessing
+Term 1/Practical ML/resources_PracticalMachineLearning
+Term 1/Research Practice/resources_ResearchPractice-Ethics
+Term 1/Knowledge Repr/Lab1/my_aima_rebuild
