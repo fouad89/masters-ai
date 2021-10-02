@@ -1,0 +1,9 @@
+## q1
+a. How many lines does the UNCorpus file have?
+cat uncorpora_plain_20090831.tmx | wc -l
+>> 1501316
+
+b. How many segments <seg>?
+cat uncorpora_plain_20090831.tmx | grep "<seg>" | wc -w
+>> 14749167
+
