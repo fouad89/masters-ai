@@ -31,7 +31,7 @@ def parse_in(input_file_name):
 
 
 
-    return c, r , m
+    return r, c , m
 
 
 # ------------------------------------------
@@ -73,8 +73,8 @@ def solve(num_rows, num_columns, matrix):
     corner2 = (matrix[i][j] == 'o') and (i==0) and (j==num_columns) # i+1, j-1
     corner3 = (matrix[i][j] == 'o') and (i==num_rows) and (j==0) # i-1, j+1
     corner4 = (matrix[i][j] == 'o') and (i==num_rows) and (j==num_cols) # i-1, j-1
-    for i in range(num_rows):
-        for j in range(num_columns):
+    for i in range(num_rows+1):
+        for j in range(num_columns+1):
             if matrix[i][j] == 'x':
                 m_out[i][j] = 'x'
             elif condition1:
